@@ -10,7 +10,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- End of Bootstrap section -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -26,6 +25,30 @@
     <div class="container">
     <div class="row">
         <!-- Dashboard Content -->
+    </div>
+    <div class="col" id="weekly-tasks">
+        <script src="js/task-manager.js"></script>
+        <form>
+            <!--1. Name Input -->
+            <div>
+            <label for="Name">Enter your name: </label>
+            <input type="text" id="Name" name="name">
+            </div>
+            <!--Daily Task Goal -->
+            <div>
+            <label for="DailyGoal">Enter your daily task goal: </label>
+            <input type="number" name="daily-goal" id="DailyGoal">
+            </div>
+            <div>
+            <!--3. Weekly Bonus Task -->
+            <div>
+             <label for="WeeklyBonusTask">Enter your weekly bonus task: </label>
+            <input type="number" name="weekly-bonus-task" id="WeeklyBonusTask">
+            </div>    
+            <!--Goal Button-->   
+            <button id="goal-btn">Goals</button>     
+        </form>
+        <p id="goal-message"></p>
     </div>
     </div>
 </body>
