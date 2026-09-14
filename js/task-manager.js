@@ -18,18 +18,18 @@ function weeklyGoal(userName, dailyGoal, bonusTasks){
 
 // Create goal-btn EventListener
 // Target the goal-btn element
-const element = document.getElementById("goal-btnn"); 
+const button = document.getElementById("goal-btn"); 
 // Add the event Listener to the goal-btn element 
-element.addEventListener("click", eventFunction())
+button.addEventListener("click", eventFunction)
 // Create eventFunction to call weeklyGoal function
-function eventFunction() {
-    // Get appropriate values from the input fields
-    let userName = document.getElementById("user-name").value;
-    let dailyGoal = document.getElementById("daily-goal").value;
-    let bonusTasks = document.getElementById("bonus-tasks").value;
-
-    // User preventDefault to prevent form submission
+function eventFunction(event) {
+    // Use preventDefault to prevent form submission
     event.preventDefault();
+
+    // Get appropriate values from the input fields
+    let userName = document.getElementById("userName").value;
+    let dailyGoal = Number(document.getElementById("dailyGoal").value);
+    let bonusTasks = Number(document.getElementById("bonusTasks").value);
 
     // Call weeklyGoal function with the input values
     weeklyGoal(userName, dailyGoal, bonusTasks);
