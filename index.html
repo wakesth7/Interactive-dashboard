@@ -29,24 +29,28 @@
     <div class="col" id="weekly-tasks">
         <script src="js/task-manager.js"></script>
         <form>
+
             <!--1. Name Input -->
             <div>
-            <label for="Name">Enter your name: </label>
-            <input type="text" id="Name" name="name">
+            <label for="userName">Enter your name: </label>
+            <input type="text" id="userName" name="name">
             </div>
+
             <!--Daily Task Goal -->
             <div>
-            <label for="DailyGoal">Enter your daily task goal: </label>
-            <input type="number" name="daily-goal" id="DailyGoal">
+            <label for="dailyGoal">Enter your daily task goal: </label>
+            <input type="number" id="dailyGoal" name="dailygoal">
             </div>
-            <div>
+
             <!--3. Weekly Bonus Task -->
             <div>
-             <label for="WeeklyBonusTask">Enter your weekly bonus task: </label>
-            <input type="number" name="weekly-bonus-task" id="WeeklyBonusTask">
+            <label for="bonusTasks">Enter your weekly bonus task: </label>
+            <input type="number" id="bonusTasks" name="weekly-bonus-task">
             </div>    
+
             <!--Goal Button-->   
-            <button id="goal-btn">Goals</button>     
+            <button id="goal-btn">Goals</button>   
+              
         </form>
         <p id="goal-message"></p>
     </div>
