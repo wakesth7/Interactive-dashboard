@@ -8,8 +8,8 @@ function weeklyGoal(userName, dailyGoal, bonusTasks){
 
         // Create and assign string variables to output 
         let output = "";
-        output += "User: " + userName + "\n";
-        output += "Total Weekly Goal: " + totalGoal + "\n";
+        output += "User: " + userName + "<br>"
+        output += "Total Weekly Goal: " + totalGoal + "<br>";
 
         // Assign the goal-message div item to the output value
         document.getElementById("goal-message").innerHTML = output;
