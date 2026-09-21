@@ -25,6 +25,50 @@
     <div class="container">
     <div class="row">
         <!-- Dashboard Content -->
+         <div class="col" id="metric-converter">
+            <script src="js/metric-converter.js" defer></script>
+            <!-- Input field for numeric value-->
+            <form>
+                <div>
+                <label for="initialValue">Enter initial value: </label>
+                <input type="number" id="initialValue" name="initialValue">
+                </div>
+
+                 <!-- Select list for the user to convert from - the intial unit -->
+                <div class="option-menus">
+                    <div class="options-menu-right" id="fromUnit">
+                        <label for="fromUnit" >Select the unit you would like to convert FROM: </label>
+                        <select id="fromUnit" name = "fromUnit">
+                            <option value="inch">inch</option>
+                            <option value="foot">foot</option>
+                            <option value="yard">yard</option>
+                            <option value="mile">mile</option>
+                            <option value="centimeter">centimeter</option>
+                            <option value="centimeter">centimeter</option>
+                            <option value="meter">meter</option>
+                            <option value="kilometer">kilometer</option>
+                        </select>
+                    </div>
+
+                 <!-- Select list for the user to convert to - the final unit -->
+                    <div class="options-menu-left" id="toUnit">
+                        <label for="toUnit" >Select the unit you would like to convert TO: </label>
+                        <select id="toUnit" name = "toUnit">
+                            <option value="inch">inch</option>
+                            <option value="foot">foot</option>
+                            <option value="yard">yard</option>
+                            <option value="mile">mile</option>
+                            <option value="centimeter">centimeter</option>
+                            <option value="centimeter">centimeter</option>
+                            <option value="meter">meter</option>
+                            <option value="kilometer">kilometer</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <!-- Display the outputs -->
+            <p id="finalOutput"></p>
+         </div>
     </div>
     <div class="col" id="weekly-tasks">
         <script src="js/task-manager.js" defer></script>
