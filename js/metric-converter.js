@@ -62,4 +62,4 @@ function complexUnitConversion(event) {
 // Target the goal-btn element
 const button = document.getElementById("conversion-btn"); 
 // Add the event Listener to the goal-btn element 
-button.addEventListener("submit", eventFunction)
+button.addEventListener("click", eventFunction)
