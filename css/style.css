@@ -8,3 +8,8 @@ h1{
 form {
     display:table;
 }
+
+/*dislay two options side by side*/
+.option-menus {
+    display:flex;
+}
