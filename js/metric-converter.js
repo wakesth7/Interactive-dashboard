@@ -8,58 +8,73 @@ var CM_TO_FOOT = 0.028;
 var M_TO_YARD = 1.09;
 var KM_TO_MILE = 0.62;
 
-var initialValue = parseFloat(prompt('Enter the initial value:'));
-var initialUnit = prompt('Enter the initial unit:');
-var finalUnit = prompt('Enter the final unit:');
-
 function complexUnitConversion(event) {
-    // Use preventDefault() to prevent from submission 
+    // Use preventDefault() to prevent form submission 
     event.preventDefault();
 
     // Capture the values from the HTML number field 
-    const initalInput = document.getElementById("initialValue").value; 
-    const initialInputValue = parseFloat(initalInput); 
+    const initialInput = document.getElementById("initialValue").value; 
+    // Convert to numeric value
+    const initialInputValue = parseFloat(initialInput); 
 
-    // Get the selected index of the converstion type using document.getElementTagName()
-    const conversionType = document.getElemetByTagName("select"); 
-    // This will grab the first set of select elements in the HTML document which are FROM units
-    const fromUnit = conversionType[0].selectedIndex;
-    // This will grab the second set of select elements in the HTML document which are TO units
-    const toUnit = conversionType[1].selectedIndex;
+    // Get all the select elements from drop-down
+    const conversionType = document.getElementsByTagName("select"); 
+    // Have 2 different select elements with drop-down options
+    const fromUnit = conversionType[0];
+    const toUnit = conversionType[1];
 
-    // Using IF-ELSE statements, determine the conversion type and calculate the final value
+    // Now get their index positions as 
+    const fromUnitIndex = fromUnit.selectedIndex; 
+    const toUnitIndex = toUnit.selectedIndex; 
+
+    // From all options in the dropdown, based on their index, return the text values
+    const fromUnitText = fromUnit.options[fromUnitIndex].innerHTML; 
+    const toUnitText = toUnit.options[toUnitIndex].innerHTML; 
+
     let finalValue;
-    if (fromUnit === "inch" && toUnit === "centimeter") {
+    
+    if (fromUnitText === "inch" && toUnitText === "centimeter") {
         finalValue = initialInputValue * INCH_TO_CM;
     } 
-    else if (fromUnit === "foot" && toUnit === "centimeter") {
+    else if (fromUnitText === "foot" && toUnitText === "centimeter") {
         finalValue = initialInputValue * FOOT_TO_CM;
     } 
-    else if (fromUnit === "yard" && toUnit === "meter") {
+    else if (fromUnitText === "yard" && toUnitText === "meter") {
         finalValue = initialInputValue * YARD_TO_M;
     } 
-    else if (fromUnit === "mile" && toUnit === "kilometer") {
+    else if (fromUnitText === "mile" && toUnitText === "kilometer") {
         finalValue = initialInputValue * MILE_TO_KM;
     } 
-    else if (fromUnit === "centimeter" && toUnit === "inch") {
+    else if (fromUnitText === "centimeter" && toUnitText === "inch") {
         finalValue = initialInputValue * CM_TO_INCH;
     } 
-    else if (fromUnit === "centimeter" && toUnit === "foot") {
+    else if (fromUnitText === "centimeter" && toUnitText === "foot") {
         finalValue = initialInputValue * CM_TO_FOOT;
     } 
-    else if (fromUnit === "meter" && toUnit === "yard") {
+    else if (fromUnitText === "meter" && toUnitText === "yard") {
         finalValue = initialInputValue * M_TO_YARD;
     }
-    else{
+    else if (fromUnitText === "kilometer" && toUnitText === "mile") {
         finalValue = initialInputValue * KM_TO_MILE;
+    }
+    else if (fromUnitText === toUnitText){
+        // if units are identical 
+        finalValue = initialInputValue; 
+    }
+    else {
+        // sanity check; if any unmatched combination are attempted, display an error message
+        document.getElementById("conversion-message").innerHTML = "Invalid combination of unit conversion"; 
+        return; 
     }
 
     // Display the final value in the HTML document
-    document.getElementById("finalValue").innerHTML = {initialInputValue} + " " + {fromUnit} + is + {finalValue} + {finalUnit}; 
+    document.getElementById("conversion-message").innerHTML = 
+        initialInputValue + " " + fromUnitText + " is " + finalValue.toFixed(2) + " " + toUnitText;
 }
 
-// Create goal-btn EventListener
-// Target the goal-btn element
+
+// Create conversion-btn EventListener
+// Target the convertion-btn element
 const button = document.getElementById("conversion-btn"); 
 // Add the event Listener to the goal-btn element 
-button.addEventListener("click", eventFunction)
+button.addEventListener("click", complexUnitConversion)
