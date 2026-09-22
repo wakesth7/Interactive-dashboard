@@ -12,5 +12,5 @@ form {
 /*dislay two options side by side*/
 .option-menus {
     display:flex;
-    justify-content: space-between;
+    gap: 24px;
 }
