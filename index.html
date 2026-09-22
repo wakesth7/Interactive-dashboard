@@ -10,6 +10,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- End of Bootstrap section -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -26,12 +27,11 @@
     <div class="row">
         <!-- Dashboard Content -->
          <div class="col" id="metric-converter">
-            <script src="js/metric-converter.js" defer></script>
             <!-- Input field for numeric value-->
-            <form>
+            <form id="converter-form">
                 <div>
-                <label for="initialValue">Enter initial value: </label>
-                <input type="number" id="initialValue" name="initialValue">
+                    <label for="initialValue">Enter initial value: </label>
+                    <input type="number" id="initialValue" name="initialValue">
                 </div>
 
                  <!-- Select list for the user to CONVERT FROM - the intial unit -->
@@ -65,43 +65,17 @@
                 </div>
             
                 <!--Conversion Button-->   
-            <button id="conversion-btn">Convert</button>   
-
+                <button type="button" id="conversion-btn">Convert</button>   
             </form>
             <!-- Display the outputs -->
-            <p id="finalOutput"></p>
-            
+            <p id="conversion-message"></p>
+            <!-- Link JavaScript script-->
+            <script src="js/metric-converter.js" defer ></script>
+
          </div>
     </div>
-    <div class="col" id="weekly-tasks">
-        <script src="js/task-manager.js" defer></script>
-        <form>
-
-            <!--1. Name Input -->
-            <div>
-            <label for="userName">Enter your name: </label>
-            <input type="text" id="userName" name="name">
-            </div>
-
-            <!--Daily Task Goal -->
-            <div>
-            <label for="dailyGoal">Enter your daily task goal: </label>
-            <input type="number" id="dailyGoal" name="dailygoal">
-            </div>
-
-            <!--3. Weekly Bonus Task -->
-            <div>
-            <label for="bonusTasks">Enter your weekly bonus task: </label>
-            <input type="number" id="bonusTasks" name="weekly-bonus-task">
-            </div>    
-
-            <!--Goal Button-->   
-            <button id="goal-btn">Goals</button>   
-
-        </form>
-        <p id="goal-message"></p>
     </div>
-    </div>
+
 </body>
 
 </html>
