@@ -23,87 +23,130 @@
     <noscript>
         Unfortunately, your web browser does not support JavaScript.
     </noscript>
+    <!-- Begin container div -->
     <div class="container">
+    <!-- Begin row div -->
     <div class="row">
-        <!-- Dashboard Content -->
-         <div class="col" id="metric-converter">
-            <!-- Input field for numeric value-->
-            <form id="converter-form">
+
+        <!-- Start col div 1. Weekly Tasks -->
+        <div class="col" id="weekly-tasks">
+            <form>
                 <div>
-                    <label for="initialValue">Enter initial value: </label>
-                    <input type="number" id="initialValue" name="initialValue">
+                    <!--1. Name Input --> 
+                    <label for="userName">Enter your name: </label>
+                    <input type="text" id="userName" name="name">
                 </div>
 
-                 <!-- Select list for the user to CONVERT FROM - the intial unit -->
-                <div class="option-menus">
-                    <div class="options-menu-right">
-                        <label for="fromUnit" >Select the unit you would like to convert FROM: </label>
-                        <select id="fromUnit" name = "fromUnit">
-                            <option value="inch">inch</option>
-                            <option value="foot">foot</option>
-                            <option value="yard">yard</option>
-                            <option value="mile">mile</option>
-                            <option value="centimeter">centimeter</option>
-                            <option value="meter">meter</option>
-                            <option value="kilometer">kilometer</option>
-                        </select>
-                    </div>
-
-                 <!-- Select list for the user to CONVERT TO - the final unit -->
-                    <div class="options-menu-left">
-                        <label for="toUnit" >Select the unit you would like to convert TO: </label>
-                        <select id="toUnit" name = "toUnit">
-                            <option value="inch">inch</option>
-                            <option value="foot">foot</option>
-                            <option value="yard">yard</option>
-                            <option value="mile">mile</option>
-                            <option value="centimeter">centimeter</option>
-                            <option value="meter">meter</option>
-                            <option value="kilometer">kilometer</option>
-                        </select>
-                    </div>
+                <!--Daily Task Goal -->
+                <div>
+                    <label for="dailyGoal">Enter your daily task goal: </label>
+                    <input type="number" id="dailyGoal" name="dailygoal">
                 </div>
-            
-                <!--Conversion Button-->   
-                <button type="button" id="conversion-btn">Convert</button>   
+
+                <!--3. Weekly Bonus Task -->
+                <div>
+                    <label for="bonusTasks">Enter your weekly bonus task: </label>
+                    <input type="number" id="bonusTasks" name="weekly-bonus-task">
+                </div>    
+
+                <!--Goal Button-->   
+                <button id="goal-btn">Goals</button>   
             </form>
-            <!-- Display the outputs -->
-            <p id="conversion-message"></p>
-            <!-- Link JavaScript script-->
-            <script src="js/metric-converter.js" defer ></script>
 
-         </div>
-    </div>
+            <p id="goal-message"></p>
+            <!--Link JavaScript script-->
+            <script src="js/task-manager.js"></script>
+        </div>
+        <!-- End col div 1. Weekly Tasks -->
 
-    <div class="col" id="weekly-tasks">
-        <script src="js/task-manager.js" defer></script>
-        <form>
+         <!-- Start col div. 2 Metric Converter -->
+        <div class="col" id="metric-converter">
+        <form id="converter-form">
             <div>
-                <!--1. Name Input --> 
-                <label for="userName">Enter your name: </label>
-                <input type="text" id="userName" name="name">
+                <label for="initialValue">Enter initial value: </label>
+                <input type="number" id="initialValue" name="initialValue">
             </div>
 
-            <!--Daily Task Goal -->
-            <div>
-                <label for="dailyGoal">Enter your daily task goal: </label>
-                <input type="number" id="dailyGoal" name="dailygoal">
+                <!-- Select list for the user to CONVERT FROM - the intial unit -->
+            <div class="option-menus">
+                <div class="options-menu-right">
+                    <label for="fromUnit" >Select the unit you would like to convert FROM: </label>
+                    <select id="fromUnit" name = "fromUnit">
+                        <option value="inch">inch</option>
+                        <option value="foot">foot</option>
+                        <option value="yard">yard</option>
+                        <option value="mile">mile</option>
+                        <option value="centimeter">centimeter</option>
+                        <option value="meter">meter</option>
+                        <option value="kilometer">kilometer</option>
+                    </select>
+                </div>
+
+                <!-- Select list for the user to CONVERT TO - the final unit -->
+                <div class="options-menu-left">
+                    <label for="toUnit" >Select the unit you would like to convert TO: </label>
+                    <select id="toUnit" name = "toUnit">
+                        <option value="inch">inch</option>
+                        <option value="foot">foot</option>
+                        <option value="yard">yard</option>
+                        <option value="mile">mile</option>
+                        <option value="centimeter">centimeter</option>
+                        <option value="meter">meter</option>
+                        <option value="kilometer">kilometer</option>
+                    </select>
+                </div>
             </div>
-
-            <!--3. Weekly Bonus Task -->
-            <div>
-                <label for="bonusTasks">Enter your weekly bonus task: </label>
-                <input type="number" id="bonusTasks" name="weekly-bonus-task">
-            </div>    
-
-            <!--Goal Button-->   
-            <button id="goal-btn">Goals</button>   
+        
+            <!--Conversion Button-->   
+            <button type="button" id="conversion-btn">Convert</button>   
         </form>
 
-        <p id="goal-message"></p>
+        <!-- Display the output message -->
+        <p id="conversion-message"></p>
+        <!-- Link JavaScript script-->
+        <script src="js/metric-converter.js"></script>
+        </div> 
+        <!-- End of col div 2. Metric Converter -->
+
+        <!--Start col div 3. 8-ball game 09.28.26 -->
+        <div class="col" id="magic-eight-ball">
+            <link rel="stylesheet" href="css/magic-eight-ball.css">
+            <h2 class="heading">Magic Eight Ball</h2>
+            <!-- The main form in the project-->
+            <form>
+                <p>Type a yes/no question below, then click on the Eight Ball below to get your answer!</p>
+                <input id="question" name="question" size="80">
+                <div id="magicEightBall">
+                    <div id="circle"></div>
+                    <img id="ball" src="img/magic-eight-ball.png"/>
+                </div>
+                <button id="reset" name="reset" type="reset">Ask another question</button>
+            </form>
+            <br>
+            <!-- Main project -->
+
+            <!-- Bonus-->
+            <form>
+                <p>Enter a new Magic Eight Ball response </p>
+                <input id="response" name="response" size="80">
+                <button id="new_response" name="new_response" type="new_response">Add new response to view the information</button>
+            </form>
+            <!-- These will serve for the reponses to display-->
+             <p id="addresponse-message"></p>
+             <p id="total-message"></p>
+            <br>
+            <!--Bonus-->
+            <script src="js/magic-eight-ball.js" defer></script>
+        </div>
+        <!-- End of col div 3. 8-ball game 09.28.26 -->
+
+        <!-- Start col div 4. here-->
+        
     </div>
-    </div>
+    <!-- End row div-->
+     
+</div>
+<!-- End container div-->
 
 </body>
-
 </html>
