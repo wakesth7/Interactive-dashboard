@@ -53,7 +53,9 @@ END
 ```
 
 ## Magic Eight Ball Application 
-This is a cool implementation of the Magic Eight Ball which allows users to ask a yes/no question. The answers are stored in an array within the JavaScript code. A simple random function is used to randomized the answers and present it as a response to the user. Furthermore, as a bonus addition, the users are also allowed to add their own responses and further presented with the added responses as well as the total tally of resposnes within the code. 
-![Eight Ball Image] (/Users/think/Desktop/WEB115F26/git115/Interactive-dashboard/img)
+This is a cool implementation of the Magic Eight Ball which allows users to ask a yes/no question. The answers are stored in an array within the JavaScript code. A simple random function is used to randomized the answers and present it as a response to the user. Furthermore, as a bonus addition, the users are also allowed to add their own responses and further presented with the added responses as well as the total tally of responses within the code.
+
+![Eight Ball Image]
+![[Screenshot 2026-09-28 at 8.15.36 PM.png|241]]
 
 
