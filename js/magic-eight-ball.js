@@ -57,7 +57,7 @@ newresponseClick.addEventListener("click", function(event){
         document.getElementById("addresponse-message").innerHTML = "The newly added message is: " + userResponse; 
         
         // Display the current length of the array to the console 
-        document.getElementById("total-message").innerHTML = "The total length of the array is " + answers.length; 
+        document.getElementById("total-message").innerHTML = "The total length of the array is: " + answers.length; 
     }
     else {
         // Prompt the user to enter a valid response 
@@ -72,7 +72,7 @@ clickReset.addEventListener("click", function(){
 
     // Added from bonus section to remove the input text value 
     document.getElementById("response").value = ""; 
-    
+
     // Added from bonus section to refresh the response display 
     document.getElementById("addresponse-message").innerHTML = "";
     document.getElementById("total-message").innerHTML = ""; 
