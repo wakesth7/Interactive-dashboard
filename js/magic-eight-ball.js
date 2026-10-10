@@ -16,10 +16,11 @@ function displayAnswer(){
     let randomIndex = Math.floor(Math.random() * answers.length);
     // Use the random index to generate a random answer
     let randomAnswers = answers[randomIndex]; 
+    // Now set the display property
+    circleElem.style.display = "inline-block"; // this helps the display pivot to the centre from the edge of the 8-ball
     // Attach the circle div's innerHTML property to randomAnswers variable
-    circleElem.innerHTML = randomAnswers; 
-    // Now display the property
-    circleElem.style.display = "block";
+    circleElem.innerHTML = '<br><br><br>' + randomAnswers; 
+
 }
 
 // Get the ball and question elements

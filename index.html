@@ -28,8 +28,9 @@
     <!-- Begin row div -->
     <div class="row">
 
-        <!-- Start col div 1. Weekly Tasks -->
+        <!-- Start col div 1. weekly-tasks -->
         <div class="col" id="weekly-tasks">
+            <!-- Form 1 -->
             <form>
                 <div>
                     <!--1. Name Input --> 
@@ -52,12 +53,30 @@
                 <!--Goal Button-->   
                 <button id="goal-btn">Goals</button>   
             </form>
-
+            <!-- End of Form 1 -->
             <p id="goal-message"></p>
-            <!--Link JavaScript script-->
+
+            <!-- Start of new div within weekly-tasks div 10.12.2026-->
+            <div id="task-list">
+                <h3>Weekly Task List</h3>
+                <p>Enter a task below to manage your goals</p>
+                <!-- Form 2 Giving it a separate id -->
+                <form id="task-form">
+                    <div>
+                        <!-- Task Input --> 
+                    <label for="task-name">Enter task: </label>
+                    <input type="text" id="task-name" name="task-name">
+                    </div>
+                    <button id="add-task">Add Task</button>
+                </form>
+                <!-- End of form 2-->
+            </div>
+            <!-- End of new div within weekly-tasks div 10.12.2026-->
+            
+                 <!--Link JavaScript script; always a good idead to place this at the end-->
             <script src="js/task-manager.js"></script>
         </div>
-        <!-- End col div 1. Weekly Tasks -->
+        <!-- End col div 1. weekly-tasks -->
 
          <!-- Start col div. 2 Metric Converter -->
         <div class="col" id="metric-converter">
