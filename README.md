@@ -3,10 +3,11 @@
 ### This project is a web-based dashboard built for WEB-115 to demonstrate interactive JavaScript features.
 
 ## TODO: Future Enhancements
-- [ ] Add a metric conversion tool.
-- [ ] Integrate a task list with array storage.
+- [X] Add a metric conversion tool.
+- [X] Integrate a task list with array storage.
 - [ ] Add JavaScript logic for a live clock.
 - [X] Add a weekly task goal calculator
+- [ ] Create all new HTML forms with unique IDs
 
 ## Weekly Task Goals 
 ==> This feature provides a sum total(numerical value) of weekly goal (dailyGoal multiplied by 5 workdays) and weekly bonus tasks. For instance, if the daily taks goals are 5 tasks with weekly bonus task of 5, the total weekly goal is 30. 
