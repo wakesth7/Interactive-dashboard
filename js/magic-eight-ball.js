@@ -44,9 +44,9 @@ eightBall.addEventListener("mousedown", function(){
 
 //  Bonus challenge: add a second button that will allow the user to add new Magic Eight Ball responses.
 
-// Adding a button to listen to click event on the add new_response button
+// Adding a button to listen to click event on the add new_response buttonf
 const newresponseClick = document.getElementById("new_response");
-// Add the eventListener
+// Add the eventListene
 newresponseClick.addEventListener("click", function(event){
     event.preventDefault(); 
     // Get the user response and add it to the global array 
