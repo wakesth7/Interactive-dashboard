@@ -1,8 +1,14 @@
+body{
+    background-color: #f4f7f6; /*mint-grey pastel color*/
+}
+
 h1{
     text-align: center;
     color: white;
-    background-color: teal;
+    background-color: #0f4c5c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0; /* Ensures the header stays perfectly flush with the page top edge */
+    padding: 16px 0;
 }
 
 form {
