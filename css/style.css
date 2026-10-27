@@ -12,7 +12,7 @@ h1{
     margin-top: 0; /* Ensures the header stays perfectly flush with the page top edge */
     box-sizing: border-box; /* Forces padding to stay inside screen */
     width: 100%; 
-    padding: 16px 20px; /* 16px top/bottom, safe 20px dynamic left-right */
+    padding: 20px 20px; /* 16px top/bottom, safe 20px dynamic left-right */
 }
 
 form {
@@ -34,4 +34,12 @@ html, body {
 
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+/*Force the long input fields to sit inside their columns */
+#question, #response {
+    width: 110%;
+    max-width: 110%;
+    box-sizing: border-box;
+    padding: 8px; /* Adds clean spacing inside the box */
 }
