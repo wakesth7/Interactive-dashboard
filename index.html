@@ -15,7 +15,7 @@
 
 <body>
     <h1>My Interactive Dashboard</h1>
-    <p>This dashboard was created by Shiva Thapa for the WEB-115 course at Wake Tech.</p>
+    <p>This dashboard is created and maintained by Shiva Thapa for the WEB-115 course at Wake Tech  .</p>
     <script>
         document.write("This dashboard demonstrates how JavaScript can be used to create interactive websites.")
     </script>
@@ -23,13 +23,16 @@
     <noscript>
         Unfortunately, your web browser does not support JavaScript.
     </noscript>
+    <br>
+    <br>
     <!-- Begin container div -->
     <div class="container">
-    <!-- Begin row div -->
+    <!-- Begin 1st row div -->
     <div class="row">
 
         <!-- Start col div 1. weekly-tasks -->
         <div class="col" id="weekly-tasks">
+            <h3>Basic Task Manager</h3>
             <!-- Form 1 -->
             <form>
                 <div>
@@ -55,6 +58,12 @@
             </form>
             <!-- End of Form 1 -->
             <p id="goal-message"></p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
             <!-- Start of new div within weekly-tasks div 10.12.2026-->
             <div id="task-list">
@@ -72,6 +81,10 @@
                 <!-- End of form 2-->
             </div>
             <!-- End of new div within weekly-tasks div 10.12.2026-->
+
+            <!-- Start of Task Manager Web Appliction div 10.26.2026-->
+            
+            <!-- End of Task Manager Web Application 10.26.2026-->
             
                  <!--Link JavaScript script; always a good idead to place this at the end-->
             <script src="js/task-manager.js"></script>
@@ -80,6 +93,7 @@
 
          <!-- Start col div. 2 Metric Converter -->
         <div class="col" id="metric-converter">
+            <h3>Metric converter</h3>
         <form id="converter-form">
             <div>
                 <label for="initialValue">Enter initial value: </label>
@@ -120,10 +134,10 @@
             <button type="button" id="conversion-btn">Convert</button>   
         </form>
 
-        <!-- Display the output message -->
-        <p id="conversion-message"></p>
-        <!-- Link JavaScript script-->
-        <script src="js/metric-converter.js"></script>
+            <!-- Display the output message -->
+            <p id="conversion-message"></p>
+            <!-- Link JavaScript script-->
+            <script src="js/metric-converter.js"></script>
         </div> 
         <!-- End of col div 2. Metric Converter -->
 
@@ -162,8 +176,57 @@
         <!-- Start col div 4. here-->
         
     </div>
-    <!-- End row div-->
-     
+    <!-- End 1st row div-->
+
+    <!-- For Updated Task Manager Web App-->
+    <!--Second row div-->
+    <div class="row2">
+        <!-- Start of Task Manager Web Appliction div 10.26.2026-->
+         <!-- Start col 1 row2 . weekly-tasks -->
+        <div class="col" id="web-tasks-updated-app">
+            <div id="Task-Manger-Web-Application">
+                <h3>Updated Task Manager Web Application</h3>
+                <section>
+                    <!-- Form 3 with new ID-->
+                    <form id="webTaskForm">
+                        <!-- Task name input-->
+                         <div>
+                            <label for="webTask">Enter task name here:</label>
+                            <input type="text" id="webTask" name="webTask">
+                         </div>
+                         <!-- Priority Dropdown-->
+                          <div>
+                            <label for="taskPriority">Select priority:</label>
+                            <select id="taskPriority" name="taskPriority">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                          </div>
+                          <!-- CheckBox-->
+                           <div>
+                            <label for="taskImp">Mark as important:</label>
+                            <input type="checkbox" id="taskImp" name="taskImp">
+                           </div>
+                           <!-- Submit button-->
+                            <button type="submit" id="addTaskBtn">Add Task</button>
+                    </form>
+                    <br>
+                    <!-- Delete list button-->
+                    <button type="button" id="clearListBtn"> Delete entire list</button>
+                     <!-- New div for tasks-list as its not clearly mentioned: updating old one would remove it from the webpage itself-->
+                    <br>
+                    <div id="dynamic-add-task"></div>
+                </section>
+                <script src="js/webAppTM.js" defer></script>
+            </div>
+            <!-- End of Task Manager Web Application 10.26.2026-->
+        </div>
+        <!-- Close col1 row2-->
+        
+    </div>
+
+    
 </div>
 <!-- End container div-->
 
