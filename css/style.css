@@ -10,7 +10,9 @@ h1{
     background-color: #0f4c5c;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 0; /* Ensures the header stays perfectly flush with the page top edge */
-    padding: 16px 0;
+    box-sizing: border-box; /* Forces padding to stay inside screen */
+    width: 100%; 
+    padding: 16px 20px; /* 16px top/bottom, safe 20px dynamic left-right */
 }
 
 form {
