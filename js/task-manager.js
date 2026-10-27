@@ -1,7 +1,6 @@
 // Declare a global array to keep track of the tasks 10.12.2026
 let myTasks = []
 
-
 // Create function weeklyGoal 
 function weeklyGoal(userName, dailyGoal, bonusTasks){
     // Calculate weekly goal based on number of workdays (5) per week
@@ -80,3 +79,4 @@ addtaskButton.addEventListener("click", function(event){
     }
 
 });
+
