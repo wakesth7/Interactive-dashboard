@@ -24,3 +24,14 @@ form {
     display:flex;
     gap: 24px;
 }
+
+/* Erases any horizontal page spillover instantly */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
