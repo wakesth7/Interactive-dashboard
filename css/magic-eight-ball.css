@@ -1,12 +1,9 @@
 
-#magic-eight-ball {
-  max-width: 410px;
-  text-align: center;
-  margin: auto;
-}
+
+
+
 
 #circle {
-  font-size: 12pt;
   background-color: white;
   color: black;
   position: absolute;
@@ -18,7 +15,6 @@
   text-wrap: wrap;
   display: none;
 }
-
 
 img:active {
   animation: shake 1s;
@@ -42,3 +38,31 @@ img:visited {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.eight-ball-input {
+  width: 100% !important;
+  max-width: 350px !important; 
+}
+
+/* Center all elements inside forms */
+#magic-eight-ball form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Force control over the input box dimensions */
+#question, #response {
+    width: 100% !important;     /* Overrides the HTML size="80" attribute */
+    max-width: 450px !important; /* Caps the width to a perfect, readable size */
+    padding: 10px 12px;
+    margin: 12px auto;          /* Centers the inputs horizontally */
+    box-sizing: border-box;
+}
+
+/* Clean up the bonus button so it matches the input width */
+#new_response {
+    max-width: 450px;
+    width: 100%;
+}
