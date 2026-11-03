@@ -15,10 +15,9 @@
 
 <body>
     <h1>My Interactive Dashboard</h1>
-    <p>This dashboard is created and maintained by Shiva Thapa for the WEB-115 course at Wake Tech  .</p>
-    <script>
-        document.write("This dashboard demonstrates how JavaScript can be used to create interactive websites.")
-    </script>
+    <p class="intro-msg">This dashboard is created and maintained by Shiva Thapa for the WEB-115 course at Wake Tech.</p>
+    <p class = "intro-msg">This dashboard demonstrates how JavaScript can be used to create interactive websites. </p>
+    
     <!-- The <noscript> is for web browsers with JavaScript rendering disabled. -->
     <noscript>
         Unfortunately, your web browser does not support JavaScript.
@@ -28,7 +27,10 @@
     <!-- Begin container div -->
     <div class="container">
     <!-- Begin 1st row div -->
-    <div class="row">
+    <div class="row" >
+
+        <!-- Start of dashboard grid1-->
+        <div class="dashboard-grid1">
 
         <!-- Start col div 1. weekly-tasks -->
         <div class="col" id="weekly-tasks">
@@ -66,21 +68,51 @@
             <br>
 
             <!-- Start of new div within weekly-tasks div 10.12.2026-->
-            <div id="task-list">
-                <h3>Weekly Task List</h3>
-                <p>Enter a task below to manage your goals</p>
-                <!-- Form 2 Giving it a separate id -->
-                <form id="task-form">
-                    <div>
-                        <!-- Task Input --> 
-                    <label for="task-name">Enter task: </label>
-                    <input type="text" id="task-name" name="task-name">
-                    </div>
-                    <button id="add-task">Add Task</button>
-                </form>
-                <!-- End of form 2-->
-            </div>
+             <!-- Removed on 11.2.2026 per the Instructor's feedback -->
+<!--             
+            <div id="Task-Manager-Web-Appication">
+               
+            </div> -->
             <!-- End of new div within weekly-tasks div 10.12.2026-->
+             <!-- Adding Updated task manager here on 11.1.2026 which was initially submitted week prior-->
+              <div id="Task-Manger-Web-Application">
+                <h3>Updated Task Manager Web Application</h3>
+                <p>Enter a task below to manage your goals</p>
+                <section>
+                    <!-- Form 3 with new ID-->
+                    <form id="webTaskForm">
+                        <!-- Task name input-->
+                         <div>
+                            <label for="webTask">Enter task name here:</label>
+                            <input type="text" id="webTask" name="webTask">
+                         </div>
+                         <!-- Priority Dropdown-->
+                          <div>
+                            <label for="taskPriority">Select priority:</label>
+                            <select id="taskPriority" name="taskPriority">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                          </div>
+                          <!-- CheckBox-->
+                           <div>
+                            <label for="taskImp">Mark as important:</label>
+                            <input type="checkbox" id="taskImp" name="taskImp">
+                           </div>
+                           <!-- Submit button-->
+                            <button type="submit" id="addTaskBtn">Add Task</button>
+                    </form>
+                    <br>
+                    <!-- Delete list button-->
+                    <button type="button" id="clearListBtn"> Delete entire list</button>
+                     <!-- New div for tasks-list as its not clearly mentioned: updating old one would remove it from the webpage itself-->
+                    <br>
+                    <div id="dynamic-add-task"></div>
+                </section>
+                <script src="js/webAppTM.js" defer></script>
+            </div>
+            <!-- End of Task Manager Web Application 10.26.2026-->
 
             <!-- Start of Task Manager Web Appliction div 10.26.2026-->
             
@@ -144,7 +176,7 @@
         <!--Start col div 3. 8-ball game 09.28.26 -->
         <div class="col" id="magic-eight-ball">
             <link rel="stylesheet" href="css/magic-eight-ball.css">
-            <h2 class="heading">Magic Eight Ball</h2>
+            <h3 class="heading">Magic Eight Ball</h3>
             <!-- The main form in the project-->
             <form>
                 <p>Type a yes/no question below, then click on the Eight Ball below to get your answer!</p>
@@ -173,59 +205,30 @@
         </div>
         <!-- End of col div 3. 8-ball game 09.28.26 -->
 
-        <!-- Start col div 4. here-->
+        <!-- Start col div 4. here which is to create Real Time Digital Clock and Calendar--> 
+         <div class="col" id="digital-clock">
+            <link rel="stylesheet" href="css/digital.clock.css">
+            <h3>Current Time & Date</h3>
+            <!-- div for TIME and DATE DISPLAY-->
+             <div class="clock-display">
+                <p id="clock-face"></p>
+                <p id="calendar-date"></p>
+             </div>
+             <br>
+            <script src="js/digital-clock.js" defer></script>
+         </div>
+         <!-- End of col div 4. -->
+
+        </div>
+        <!-- End of dashboard-grid 1 -->
         
     </div>
     <!-- End 1st row div-->
 
     <!-- For Updated Task Manager Web App-->
     <!--Second row div-->
-    <div class="row2">
-        <!-- Start of Task Manager Web Appliction div 10.26.2026-->
-         <!-- Start col 1 row2 . weekly-tasks -->
-        <div class="col" id="web-tasks-updated-app">
-            <div id="Task-Manger-Web-Application">
-                <h3>Updated Task Manager Web Application</h3>
-                <section>
-                    <!-- Form 3 with new ID-->
-                    <form id="webTaskForm">
-                        <!-- Task name input-->
-                         <div>
-                            <label for="webTask">Enter task name here:</label>
-                            <input type="text" id="webTask" name="webTask">
-                         </div>
-                         <!-- Priority Dropdown-->
-                          <div>
-                            <label for="taskPriority">Select priority:</label>
-                            <select id="taskPriority" name="taskPriority">
-                                <option value="High">High</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Low">Low</option>
-                            </select>
-                          </div>
-                          <!-- CheckBox-->
-                           <div>
-                            <label for="taskImp">Mark as important:</label>
-                            <input type="checkbox" id="taskImp" name="taskImp">
-                           </div>
-                           <!-- Submit button-->
-                            <button type="submit" id="addTaskBtn">Add Task</button>
-                    </form>
-                    <br>
-                    <!-- Delete list button-->
-                    <button type="button" id="clearListBtn"> Delete entire list</button>
-                     <!-- New div for tasks-list as its not clearly mentioned: updating old one would remove it from the webpage itself-->
-                    <br>
-                    <div id="dynamic-add-task"></div>
-                </section>
-                <script src="js/webAppTM.js" defer></script>
-            </div>
-            <!-- End of Task Manager Web Application 10.26.2026-->
-        </div>
-        <!-- Close col1 row2-->
-        
-    </div>
-
+    <!-- Removed this as per Professor's assignment feedback 11.1.26-->
+          
     
 </div>
 <!-- End container div-->
